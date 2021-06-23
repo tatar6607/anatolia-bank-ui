@@ -1,5 +1,4 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -8,12 +7,9 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import StarIcon from '@material-ui/icons/StarBorder';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Box from '@material-ui/core/Box';
 import CardMedia from '@material-ui/core/CardMedia';
 import SaveIcon from '@material-ui/icons/Save';
 import Skeleton from '@material-ui/lab/Skeleton';
@@ -39,22 +35,22 @@ const useStyles = makeStyles((theme) => ({
     },
     liste: {
         margin: theme.spacing(0, 0),
-        color:"#1c54b2",
-        backgroundColor:"#e8eaf6",
-       
-       
-        
+        color: "#1c54b2",
+        backgroundColor: "#e8eaf6",
+
+
+
     },
     heroContent: {
         padding: theme.spacing(2, 2, 3),
-       
-        borderRadius:"20%",
+
+        borderRadius: "20%",
     },
     cardHeader: {
         fontSize: "34px",
         // backgroundColor:
         //     theme.palette.type === 'light' ? theme.palette.grey[500] : theme.palette.grey[700],
-            backgroundColor:"#ff9800",
+        backgroundColor: "#ff9800",
         height: 70,
         color: "blue",
     },
@@ -62,11 +58,11 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'baseline',
-       paddingTop: theme.spacing(3),
-       marginBottom: theme.spacing(2),
+        paddingTop: theme.spacing(3),
+        marginBottom: theme.spacing(2),
     },
-    buttondiv:{
-        backgroundColor:"#ff9800",
+    buttondiv: {
+        backgroundColor: "#ff9800",
     }
 
 }));
@@ -74,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
 const tiers = [
     {
         title: 'Basic',
-        subheader: 'Most popular',
+        subheader: 'For everybody',
         image: "https://cdn.pixabay.com/photo/2017/09/07/08/54/money-2724241_960_720.jpg",
         price: '5.50',
         description: ['10 users included', '2 GB of storage', 'Help center access', 'Email support'],
@@ -118,7 +114,7 @@ export default function Mprice() {
 
 
             <Container maxWidth="md" component="main" className={classes.heroContent}>
-                <Typography component="h2" variant="h3" align="center" color="textPrimary" color="#ff9100">
+                <Typography component="h2" variant="h3" align="center" color="#ff9100">
                     Price
                 </Typography>
                 <Typography variant="h5" align="center" color="textSecondary" component="p">
@@ -127,8 +123,8 @@ export default function Mprice() {
                 </Typography>
             </Container>
 
-            <Container class={classes.border} maxWidth="md" component="main">
-                <Grid container spacing={5} alignItems="flex-end">
+            <Container justifyContent="center" alignItems="center" textAlign="center" maxWidth="md" component="main">
+                <Grid container spacing={5}>
                     {tiers.map((tier) => (
 
                         <Grid item key={tier.title} xs={12} sm={tier.title === 'Enterprise' ? 12 : 6} md={4}>
@@ -158,15 +154,15 @@ export default function Mprice() {
                                             /mo
                                         </Typography>
                                     </div>
-                                 
-                                        <ul>
-                                            {tier.description.map((line) => (
-                                                <Typography component="li" variant="subtitle1" align="center" key={line}>
-                                                    {line}
-                                                </Typography>
-                                            ))}
-                                        </ul>
-                                  
+
+                                    <ul>
+                                        {tier.description.map((line) => (
+                                            <Typography component="li" variant="subtitle1" align="center" key={line}>
+                                                {line}
+                                            </Typography>
+                                        ))}
+                                    </ul>
+
                                 </CardContent>
                                 <CardActions class={classes.buttondiv}>
                                     <Skeleton animation={false} />
@@ -175,7 +171,7 @@ export default function Mprice() {
                                         color="primary"
                                         size="large"
                                         className={classes.button}
-                                        startIcon={<SaveIcon />} className={classes.root}>
+                                        startIcon={<SaveIcon />} >
                                         <Skeleton variant="text" /> Book Now
                                     </Button>
 
