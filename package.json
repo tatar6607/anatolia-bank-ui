@@ -18,7 +18,11 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.3",
     "web-vitals": "^1.1.2",
-    "yup": "^0.32.8"
+    "yup": "^0.32.8",
+    "font-awesome": "^4.7.0",
+    "@material-ui/core": "4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57"
   },
   "scripts": {
     "start": "react-scripts start",

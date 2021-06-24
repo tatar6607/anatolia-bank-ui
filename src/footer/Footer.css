@@ -1,0 +1,49 @@
+.Footer {
+  padding: 5rem;
+  background-color: #222021;
+  color: white;
+}
+.Footer_Icerik {
+  color: #757173;
+  margin-bottom: 15px;
+}
+.Footer_Baslik {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.Footer {
+  padding: 5rem;
+  background-color: #222021;
+  color: white;
+  font-family: "Roboto", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+}
+p {
+  color: #757173;
+}
+.Footer_Baslik {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  background-color: rgb(95, 99, 102);
+  color: #faf3f6;
+  border: 1px solid rgb(177, 169, 169);
+  padding: 0.7rem;
+  border-radius: 50%;
+  width: 40px;
+  box-shadow: 7px 5px 1px 0px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 7px 5px 1px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 7px 5px 1px 0px rgba(0, 0, 0, 0.7);
+}
+.logo:hover {
+  background-color: rgb(177, 166, 166);
+  color: #645f61;
+}
+.links {
+  color: rgb(199, 184, 184);
+}

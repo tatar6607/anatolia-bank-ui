@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
 import { Icon } from "semantic-ui-react";
-import logo from "../images/logo4.png";
-import {} from "./TopNavbar2.css";
+import logo from "../images/logo.png";
+import "./MyNavbar.css";
 
-const TopNavbar2 = () => {
+const MyNavbar = () => {
   return (
     <div className="nav-main-top">
       <Container fluid className="nav-main-bottom">
@@ -152,4 +152,4 @@ const ThirdMenu = () => {
   );
 };
 
-export default TopNavbar2;
+export default MyNavbar;
