@@ -43,3 +43,7 @@ img {
 .carousel-indicators button {
   border-radius: 300px;
 }
+
+.carousel-inner {
+  max-height: 400px;
+}
