@@ -4,7 +4,7 @@ import "./Footer.css";
 import logo from "../images/logoAnatolia.png";
 const Footer = () => {
   return (
-    <div className=" bg-dark container-fluid fixed-bottom">
+    <div className=" bg-dark container-fluid pt-2 mt-2">
       <div className=" container text-center text-md-left">
         <Row className="text-center text-md-left mt-3 pb-3">
           <Col className="mt-3">
