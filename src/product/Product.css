@@ -1,15 +1,20 @@
-.pro-ana {  
-  margin-top: 2rem;   
+.pro-ana {
+  margin-top: 1rem;
   height: 60rem;
-  width: 100rem;  
-  background: linear-gradient(90deg, rgba(13,21,78) 0%, rgba(13,21,78) 0%, rgba(91,9,84) 100%);
-  margin-left: 20%;
-  margin-right: 20%;
-  border-radius: 1rem;  
+  width: 100rem;
+  background: linear-gradient(
+    90deg,
+    rgba(13, 21, 78) 0%,
+    rgba(13, 21, 78) 0%,
+    rgba(91, 9, 84) 100%
+  );
+  /* margin-left: 20%;
+  margin-right: 20%; */
+  border-radius: 1rem;
 }
-.pro-header{
+.pro-header {
   font-size: 2.5rem;
-  color: #FFF;
+  color: #fff;
   margin-left: 10rem;
   padding-top: 2.5rem;
   font-weight: 600;
@@ -17,77 +22,77 @@
   letter-spacing: 0.2rem;
 }
 .pro-div {
- position: absolute; 
- border-bottom: 1rem; 
- padding: 1rem;
- width: 33rem;
- height: 36rem;
- font-size: 1.3rem;  
+  position: absolute;
+  border-bottom: 1rem;
+  padding: 1rem;
+  width: 33rem;
+  height: 36rem;
+  font-size: 1.3rem;
 }
-.cont{  
+.cont {
   width: 33rem;
   height: 36rem !important;
-  background-color: #FFF;
+  background-color: #fff;
 }
-.first{  
+.first {
   margin-left: 3rem;
-  margin-top: 1rem;  
+  margin-top: 1rem;
 }
-.second{
+.second {
   margin-left: 34rem;
-  margin-top: 1rem;  
-  
+  margin-top: 1rem;
 }
-.third{
+.third {
   margin-left: 65rem;
   margin-top: 1rem;
 }
-.pro-list {  
+.pro-list {
   padding: 0.5rem;
- margin: 1rem 3rem; 
- background-color: #FFF;
- color: #ea8039; 
- border-radius: 1rem;
- box-shadow: 0.3rem 0.3rem 0.3rem #da7e14;
+  margin: 1rem 3rem;
+  background-color: #fff;
+  color: #ea8039;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem #da7e14;
 }
-.list-btn {   
-  border-bottom: 0.06rem solid #D93425;
-  margin: 1.5rem 1rem;  
-  color: rgb(15, 20, 16); 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
-  font-weight: 700;  
+.list-btn {
+  border-bottom: 0.06rem solid #d93425;
+  margin: 1.5rem 1rem;
+  color: rgb(15, 20, 16);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
 }
 .list-btn :hover {
-  background-color: #f5a774;    
+  background-color: #f5a774;
 }
 
-.icon{  
-font-size: 2.2rem !important ;
-color: #D93425;
-float: right !important;
+.icon-card {
+  font-size: 2.2rem !important ;
+  color: #d93425;
+  float: right !important;
 }
-.icn1{
+.icn1 {
   position: initial;
   float: left !important;
 }
 .pic-4 {
- margin-left: 2rem;
- width: 19rem;
- height: 12rem;
+  margin-left: 2rem;
+  width: 19rem;
+  height: 12rem;
 }
-.d-text{  
+.d-text {
   padding: 1rem;
   font-weight: 600;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-.head1{
+.head1 {
   color: #991611;
   font-size: 1.5rem;
 }
-.text{
+.text {
   color: #070300;
 }
-.details{
+.details {
   color: #c55d17;
   font-weight: 800;
   margin-left: 70%;
