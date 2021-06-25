@@ -8,8 +8,8 @@
     rgba(13, 21, 78) 0%,
     rgba(91, 9, 84) 100%
   );
-  /* margin-left: 20%;
-  margin-right: 20%; */
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 1rem;
 }
 .pro-header {
