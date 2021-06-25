@@ -87,7 +87,7 @@ const SecondMenu = () => {
             Mobile Bank
           </Nav.Link>
         </Nav.Item> */}
-        <Nav.Item>
+        <Nav.Item className="me-4">
           <Nav.Link bsPrefix={myClass}>
             <Icon
               name="user"
