@@ -3,7 +3,7 @@ import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
 import { Icon } from "semantic-ui-react";
 import logo from "../images/logo.png";
 import "./MyNavbar.css";
-
+import { Link } from "react-router-dom";
 const MyNavbar = () => {
   return (
     <div className="nav-main-top">
@@ -19,11 +19,13 @@ const MyNavbar = () => {
       <Container>
         <Row className="pt-1 d-flex justify-content-md-center text-center text-md-start">
           <Col md={4}>
-            <img
-              src={logo}
-              alt="logo"
-              style={{ height: "90px", width: "200px" }}
-            />
+            <Link to="/">
+              <img
+                src={logo}
+                alt="logo"
+                style={{ height: "90px", width: "200px" }}
+              />
+            </Link>
           </Col>
           <Col
             xs={12}
@@ -87,7 +89,7 @@ const SecondMenu = () => {
             Mobile Bank
           </Nav.Link>
         </Nav.Item> */}
-        <Nav.Item className="me-4">
+        <Nav.Item className="me-1 second-navbar">
           <Nav.Link bsPrefix={myClass}>
             <Icon
               name="user"
@@ -98,13 +100,13 @@ const SecondMenu = () => {
             Sign in
           </Nav.Link>
         </Nav.Item>
-        <Nav.Item>
+        <Nav.Item className="second-navbar">
           <Nav.Link bsPrefix={myClass}>
             <Icon
               name="unlock alternate"
               circular
               size="large"
-              className="d-block mb-1"
+              className="d-block mb-1 ms-1"
             ></Icon>
             Register
           </Nav.Link>
@@ -129,19 +131,19 @@ const ThirdMenu = () => {
                 setKey(k);
               }}
             >
-              <Nav.Link href="#/1" className="third-navbar">
+              <Nav.Link className="third-navbar" as={Link} to="/about">
                 About Us
               </Nav.Link>
-              <Nav.Link href="#/2" className="third-navbar">
+              <Nav.Link className="third-navbar" as={Link} to="/">
                 Product
               </Nav.Link>
-              <Nav.Link href="#/3" eventKey="/3" className="third-navbar">
+              <Nav.Link className="third-navbar" as={Link} to="/">
                 Package
               </Nav.Link>
-              <Nav.Link href="#/4" eventKey="/4" className="third-navbar">
+              <Nav.Link className="third-navbar" as={Link} to="/">
                 Location
               </Nav.Link>
-              <Nav.Link href="#/contact" eventKey="/5" className="third-navbar">
+              <Nav.Link className="third-navbar" as={Link} to="/">
                 Contact
               </Nav.Link>
             </Nav>
