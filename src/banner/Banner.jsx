@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Banner = () => {
   return (
     <div>
-      <header class="container-fluid">
+      <header className="p-0 container-fluid">
         <div
           id="carouselExampleDark"
           class="carousel carousel-light slide"
