@@ -49,11 +49,16 @@ const Product = () => {
         <div className="pro-header">Anatolia Cards</div>
       </Row>
 
-      <Row className="d-flex justify-content-center ms-5 ">
+      <Row>
         {cardData.map((data) => {
           const { title, image, cards, description } = data;
           return (
-            <Col xs={12} md={6} lg={4}>
+            <Col
+              xs={12}
+              md={6}
+              lg={4}
+              className="d-flex justify-content-center"
+            >
               <Card
                 style={{ maxWidth: "25rem", marginRight: "2px" }}
                 className="pro-list"
