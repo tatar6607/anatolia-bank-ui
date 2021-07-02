@@ -3,7 +3,7 @@ import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
 import { Icon } from "semantic-ui-react";
 import logo from "../images/logo.png";
 import "./MyNavbar.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 const MyNavbar = () => {
   return (
     <div className="nav-main-top">
@@ -50,22 +50,31 @@ const MyNavbar = () => {
 };
 
 const FirstMenu = () => {
+  // useHistory react-router-dom da .push() methodu ile routing yapar
+  const history = useHistory();
+  const handleItemClick = (eventKey) => {
+    eventKey === "home" ? history.push(`/`) : history.push(`/${eventKey}`);
+  };
   return (
     <div>
-      <Nav variant="tabs" defaultActiveKey="/" className="">
+      <Nav
+        variant="tabs"
+        defaultActiveKey="advantage"
+        onSelect={handleItemClick}
+      >
         <Nav.Item>
-          <Nav.Link href="/" className="nav a">
+          <Nav.Link eventKey="advantage" className="nav a">
             Advantage
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-1">Mobile Bank</Nav.Link>
+          <Nav.Link eventKey="mobile">Mobile Bank</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-3">Sign in</Nav.Link>
+          <Nav.Link eventKey="signin">Sign in</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-4">Register</Nav.Link>
+          <Nav.Link eventKey="register">Register</Nav.Link>
         </Nav.Item>
       </Nav>
     </div>
@@ -76,19 +85,7 @@ const SecondMenu = () => {
   const myClass = "second-navbar";
   return (
     <div>
-      <Nav className="d-flex ps-5 ps-md-0 justify-content-center justify-content-md-end">
-        {/* <Nav.Item>
-          <Nav.Link bsPrefix={myClass}>
-            <Icon name="university"> </Icon>
-            Advantage
-          </Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link bsPrefix={myClass}>
-            <Icon name="suitcase"> </Icon>
-            Mobile Bank
-          </Nav.Link>
-        </Nav.Item> */}
+      <Nav className="d-flex  ps-md-0 justify-content-center justify-content-md-end">
         <Nav.Item className="me-1 second-navbar">
           <Nav.Link bsPrefix={myClass}>
             <Icon
@@ -117,33 +114,38 @@ const SecondMenu = () => {
 };
 
 const ThirdMenu = () => {
-  let [key, setKey] = useState("#/1");
+  const history = useHistory();
+  const [activeKey, setActiveKey] = useState("home");
+
+  const handleItemClick = (eventKey) => {
+    eventKey === "home" ? history.push(`/`) : history.push(`/${eventKey}`);
+    setActiveKey(eventKey);
+  };
+
   return (
     <div>
       <Navbar expand="md">
         <Container className="p-0">
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" className="" />
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav
               className="me-auto"
-              activeKey={key}
-              onSelect={(k) => {
-                setKey(k);
-              }}
+              activeKey={activeKey}
+              onSelect={handleItemClick}
             >
-              <Nav.Link className="third-navbar" as={Link} to="/about">
+              <Nav.Link className="third-navbar" eventKey="about">
                 About Us
               </Nav.Link>
-              <Nav.Link className="third-navbar" as={Link} to="/">
+              <Nav.Link className="third-navbar" eventKey="home">
                 Product
               </Nav.Link>
-              <Nav.Link className="third-navbar" as={Link} to="/">
+              <Nav.Link className="third-navbar" eventKey="package">
                 Package
               </Nav.Link>
-              <Nav.Link className="third-navbar" as={Link} to="/">
+              <Nav.Link className="third-navbar" eventKey="location">
                 Location
               </Nav.Link>
-              <Nav.Link className="third-navbar" as={Link} to="/">
+              <Nav.Link className="third-navbar" eventKey="contact">
                 Contact
               </Nav.Link>
             </Nav>
